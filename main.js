@@ -17,7 +17,36 @@
 // start with an empty array
 // loop - inside the loop we add elements to the array
 
-let patternArray = [];
-for (let n = 10; n <= 530; n += 20) {
-  patternArray.push(n);
+// let patternArray = [];
+// for (let n = 10; n <= 530; n += 20) {
+// patternArray.push(n);
+// }
+
+// create arrays - querySelectorAll
+// let hiIdEl = document.querySelector("#hi");
+
+// create arrays - split a string
+
+// document.addEventListener("click", splitInput);
+
+// function splitInput() {
+// let myStr = document.getElementById("user-input").value;
+// let myArray = myStr.split(",");
+// console.log(myArray);
+// console.log(myArray[0], myArray[1]);
+// }
+
+// creat arrays - from a text file
+
+let colors;
+
+fetch("web-colors.txt").then(convertData).then(processData);
+
+function convertData(rawData) {
+  return rawData.text();
+}
+
+function processData(strData) {
+  colors = strData.split("/\r?\n/");
+  console.log(colors);
 }
