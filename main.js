@@ -38,15 +38,15 @@
 
 // creat arrays - from a text file
 
-let colors;
+// let colors;
 
-fetch("web-colors.txt").then(convertData).then(processData);
+// fetch("web-colors.txt").then(convertData).then(processData);
 
-function convertData(rawData) {
-  return rawData.text();
-}
+// function convertData(rawData) {
+// return rawData.text();
+// }
 
-function processData(strData) {
-  colors = strData.split("/\r?\n/");
-  console.log(colors);
-}
+// function processData(strData) {
+// colors = strData.split("/\r?\n/");
+// console.log(colors);
+// }
